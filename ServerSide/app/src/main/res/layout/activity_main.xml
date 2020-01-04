@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chat Server"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/infoport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/infoip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/portNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter port number(4 digit)" />
+
+    <Button
+        android:id="@+id/Create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Create" />
+
+    <TextView
+        android:id="@+id/snip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connected Clients"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:visibility="invisible"/>
+
+    <Spinner
+        android:id="@+id/spusers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+    <EditText
+        android:id="@+id/SendMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:hint="Say something"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/sentto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sent msg to selected client"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/senttoALL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sent msg to ALL Clients"
+        android:visibility="invisible"
+        android:onClick="sendAll"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/chatmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+</LinearLayout>
